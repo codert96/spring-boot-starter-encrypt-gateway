@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.codert96</groupId>
+    <artifactId>spring-boot-starter-encrypt-gateway</artifactId>
+    <version>1.0.0</version>
+    <url>https://github.com/codert96/spring-boot-starter-encrypt-gateway</url>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <bouncycastle.version>1.78.1</bouncycastle.version>
+        <kona.version>1.0.12</kona.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>codert96</name>
+            <email>tangj9604@gmail.com</email>
+            <url>https://github.com/codert96</url>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/codert96/spring-boot-starter-encrypt-gateway</url>
+        <connection>https://github.com/codert96/spring-boot-starter-encrypt-gateway.git</connection>
+        <developerConnection>https://github.com/codert96</developerConnection>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk18on -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>${bouncycastle.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tencent.kona/kona-crypto -->
+        <dependency>
+            <groupId>com.tencent.kona</groupId>
+            <artifactId>kona-crypto</artifactId>
+            <version>${kona.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.32</version>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

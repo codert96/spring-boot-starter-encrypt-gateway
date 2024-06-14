@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "spring.cloud.gateway.encrypt",
+      "type": "com.github.codert96.gateway.config.WebEncryptProperties",
+      "sourceType": "com.github.codert96.gateway.config.WebEncryptProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cloud.gateway.encrypt.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.codert96.gateway.config.WebEncryptProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.cloud.gateway.encrypt.encryptor",
+      "type": "java.lang.Class<? extends com.github.codert96.crypto.Encryptor>",
+      "description": "默认使用SM4加解密，iv是密钥的reverse",
+      "sourceType": "com.github.codert96.gateway.config.WebEncryptProperties"
+    },
+    {
+      "name": "spring.cloud.gateway.encrypt.request-content-type",
+      "type": "java.util.List<org.springframework.http.MediaType>",
+      "description": "需要解密的请求头",
+      "sourceType": "com.github.codert96.gateway.config.WebEncryptProperties"
+    },
+    {
+      "name": "spring.cloud.gateway.encrypt.response-content-type",
+      "type": "java.util.List<org.springframework.http.MediaType>",
+      "description": "需要加密的请求头",
+      "sourceType": "com.github.codert96.gateway.config.WebEncryptProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ com.github.codert96.gateway.config.WebEncryptProperties,\
+ com.github.codert96.gateway.ModifyRequestBodyFilter,\
+ com.github.codert96.gateway.ModifyResponseBodyGatewayFilter
