@@ -8,6 +8,9 @@
     <artifactId>spring-boot-starter-encrypt-gateway</artifactId>
     <version>1.0.0</version>
     <url>https://github.com/codert96/spring-boot-starter-encrypt-gateway</url>
+    <description>
+        spring-boot-starter-encrypt-gateway
+    </description>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
